@@ -23,7 +23,7 @@ const Sidebar = () => {
     { name: "Overview", href: "/dashboard", icon: Home },
     { name: "Contributions", href: "/dashboard/contributions", icon: BarChart },
     { name: "Profile", href: "/dashboard/profile", icon: UserIcon },
-    { name: "Github Finder", href: "/dashboard/github-finder", icon: GithubIcon },
+    { name: "Github Finder", href: "/dashboard/githubfinder", icon: GithubIcon },
     { name: "OpenSource Projects", href: "/dashboard/opsprojects", icon: Code2Icon },
     { name: "Settings", href: "/dashboard/settings", icon: SettingsIcon },
   ];
@@ -32,14 +32,14 @@ const Sidebar = () => {
     <>
      <button
         onClick={openSidebar}
-        className="fixed top-4 left-4 z-50 p-2 bg-blue-600 text-white rounded-md md:hidden"
+        className="fixed top-4 left-4  z-50 p-2 bg-blue-600 text-white rounded-md md:hidden"
       >
         {isSidebarOpen ? <XIcon className="w-5 h-5" /> : <MenuIcon className="w-5 h-5" />}
       </button>
 
     <aside
       className={clsx(
-        "h-screen bg-white border-r border-gray-200 transition-all duration-300 ease-in-out fixed md:relative",
+        "h-screen bg-white border-r border-gray-200 transition-all duration-300 ease-in-out fixed md:relative z-10",
         {
           "w-64": !isCollapsed, // Full width
           "w-20": isCollapsed, // Collapsed width

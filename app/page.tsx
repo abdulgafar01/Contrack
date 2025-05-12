@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { RocketIcon, CodeIcon, BarChartIcon } from "@radix-ui/react-icons"
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -27,8 +28,11 @@ const Home = () => {
         A powerful tool to monitor, analyze, and share your open-source activity.
       </p>
       <div className="flex justify-center gap-4">
-        <Button size="lg" className="bg-purple-600 hover:bg-purple-700">Get Started</Button>
-        <Button variant="outline">Learn More</Button>
+        <Link href= '/dashboard'>
+        
+        <Button size="lg" className="bg-purple-600 hover:bg-purple-700 rounded-lg">Get Started</Button>
+        </Link>
+        <Button size="lg" variant="outline">Sign In</Button>
       </div>
      
     </section>
